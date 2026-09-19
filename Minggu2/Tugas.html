@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tugas Modul 2</title>
+    </head>
+    <body>
+        <h1>Tugas Modul 2</h1>
+
+        <h2>1. Form Input</h2>
+        <form name="tugas-form" method="post" action="">
+            <table class="form-table">
+                <tr>
+                    <td>Input 1 - value tetap</td>
+                    <td><input type="text" name="input1" value="H1D025053" readonly></td>
+                </tr>
+                <tr>
+                    <td>Input 2 - maksimal 5 karakter</td>
+                    <td><input type="text" name="input2" maxlength="5"></td>
+                </tr>
+                <tr>
+                    <td>Input 3 - tidak dapat diisi</td>
+                    <td><input type="text" name="input3" disabled></td>
+                </tr>
+                <tr>
+                    <td>Input 4 - wajib diisi</td>
+                    <td><input type="text" name="input4" required></td>
+                </tr>
+                <tr>
+                    <td>Input 5 - NIM</td>
+                    <td>
+                        <input type="text" name="nim" value="H1D025053" maxlength="9" pattern="[A-Za-z0-9]{9}" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
