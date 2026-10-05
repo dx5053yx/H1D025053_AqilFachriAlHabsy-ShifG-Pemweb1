@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum Pemrograman Web</title>
+</head>
+<body>
+    <form method="post" name="data" onsubmit="return cek()">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input id="filednama" type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td><input id="filedemail" type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Komentar</td>
+                <td>:</td>
+                <td><textarea id="filedkomentar" name="komentar" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function cek() {
+            const filednama = document.getElementById("filednama");
+            const filedemail = document.getElementById("filedemail");
+            const filedkomentar = document.getElementById("filedkomentar");
+            const patternNoSimbol = /^[a-zA-Z\s]+$/;
+            const patternEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(filednama.value == "" || patternNoSimbol.test(filednama.value) == false) {
+                alert("Nama belum diisi atau format nama salah");
+                filednama.focus();
+                return false;
+            }
+            if(filedemail.value == "" || patternEmail.test(filedemail.value) == false) {
+                alert("Email belum diisi atau format email salah");
+                filedemail.focus();
+                return false;
+            }
+            if(filedkomentar.value == "" || patternNoSimbol.test(filedkomentar.value) == false) {
+                alert("Komentar belum diisi atau format komentar salah");
+                filedkomentar.focus();
+                return false;
+            }
+            alert("pengisian data berhasil");
+            return true;
+        }
+    </script>
+</body>
+</html>

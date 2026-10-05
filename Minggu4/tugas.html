@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Modul 4</title>
+</head>
+<body>
+    <h2>Konversi Nilai</h2>
+    Nilai: <input id="nilai" type="number">
+    <input type="button" value="Cek" onclick="nilaiHuruf()">
+
+    <h2>Kalkulator</h2>
+    <input id="a" type="number">
+    <input id="b" type="number">
+    <input type="button" value="+" onclick="hitung('+')">
+    <input type="button" value="-" onclick="hitung('-')">
+    <input type="button" value="*" onclick="hitung('*')">
+    <input type="button" value="/" onclick="hitung('/')">
+
+    <script>
+        function nilaiHuruf() {
+            let n = document.getElementById("nilai").value;
+            if (n == "") alert("Masukkan nilai");
+            else if (n < 0 || n > 100) alert("Nilai harus 0-100");
+            else if (n <= 20) alert("E");
+            else if (n <= 40) alert("D");
+            else if (n <= 60) alert("C");
+            else if (n <= 80) alert("B");
+            else alert("A");
+        }
+
+        function hitung(op) {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let h;
+            if (a == "" || b == "") alert("Isi kedua angka");
+            else {
+                a = a * 1;
+                b = b * 1;
+                if (op == "+") h = a + b;
+                else if (op == "-") h = a - b;
+                else if (op == "*") h = a * b;
+                else if (b == 0) h = "Tidak bisa dibagi 0";
+                else h = a / b;
+                alert(h);
+            }
+        }
+    </script>
+</body>
+</html>
