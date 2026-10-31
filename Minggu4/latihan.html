@@ -32,20 +32,20 @@
             const filednama = document.getElementById("filednama");
             const filedemail = document.getElementById("filedemail");
             const filedkomentar = document.getElementById("filedkomentar");
-            const patternNoSimbol = /^[a-zA-Z\s]+$/;
+            const patternNama = /^[\p{L}\s]+$/u;
             const patternEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(filednama.value == "" || patternNoSimbol.test(filednama.value) == false) {
+            if(filednama.value.trim() == "" || !patternNama.test(filednama.value.trim())) {
                 alert("Nama belum diisi atau format nama salah");
                 filednama.focus();
                 return false;
             }
-            if(filedemail.value == "" || patternEmail.test(filedemail.value) == false) {
+            if(filedemail.value.trim() == "" || !patternEmail.test(filedemail.value.trim())) {
                 alert("Email belum diisi atau format email salah");
                 filedemail.focus();
                 return false;
             }
-            if(filedkomentar.value == "" || patternNoSimbol.test(filedkomentar.value) == false) {
-                alert("Komentar belum diisi atau format komentar salah");
+            if(filedkomentar.value.trim() == "") {
+                alert("Komentar belum diisi");
                 filedkomentar.focus();
                 return false;
             }

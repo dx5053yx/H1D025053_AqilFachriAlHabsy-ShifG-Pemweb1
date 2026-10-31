@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
     <head>
-        <title>Form</title>
-        <link rel="stylesheet" type="text/css" href="csspercobaan5.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Pendaftaran</title>
+        <link rel="stylesheet" href="csspercobaan5.css">
     </head>
     <body>
-        <h2>Free Registation</h2>
+        <h2>Free Registration</h2>
         <form method="post" name="form">
             <table>
                 <tr>
-                    <td class="kolom1">Nama</td>
+                    <td class="kolom1"><label for="txtNama">Nama</label></td>
                     <td class="kolom2">:</td>
-                    <td class="kolom3"><input name="txtNama" type="txt" id="txtNama"></td>
+                    <td class="kolom3"><input name="txtNama" type="text" id="txtNama"></td>
                 </tr>
                 <tr>
                     <td class="kolom1">Tgl Lahir</td>
                     <td>:</td>
-                    <td><input name="txtTgl" type="text" id="txtTgl" maxlength="2">
-                    \
-                    <input name="txtBulan" type="text" id="txBulan" maxlength="2">
-                    \
-                    <input name="txtTahun" type="text" id="txtTahun" maxlength="4">
+                    <td>
+                        <input name="txtTgl" type="text" id="txtTgl" maxlength="2" inputmode="numeric" aria-label="Tanggal">
+                        /
+                        <input name="txtBulan" type="text" id="txtBulan" maxlength="2" inputmode="numeric" aria-label="Bulan">
+                        /
+                        <input name="txtTahun" type="text" id="txtTahun" maxlength="4" inputmode="numeric" aria-label="Tahun">
                     </td>
                 </tr>
                 <tr>
-                    <td class="kolom1">Alamat</td>
-                    <td>;</td>
+                    <td class="kolom1"><label for="txtAlamat">Alamat</label></td>
+                    <td>:</td>
                     <td><textarea name="txtAlamat" id="txtAlamat"></textarea></td>
                 </tr>
                 <tr>
-                    <td class="kolom1">kota</td>
+                    <td class="kolom1"><label for="txtKota">Kota</label></td>
                     <td>:</td>
                     <td><input name="txtKota" type="text" id="txtKota"></td>
                 </tr>
                 <tr>
-                    <td>;</td>
-                    <td>;</td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <input name="btnKirim" type="submit" id="btnKirim" value="Kirim">
                         <input name="btnCancle" type="reset" id="btnCancle" value="Cancel">
