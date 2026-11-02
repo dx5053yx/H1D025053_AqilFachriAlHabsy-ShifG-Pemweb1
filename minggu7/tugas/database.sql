@@ -1,39 +1,25 @@
-CREATE DATABASE IF NOT EXISTS modul7_tugas
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
+create database cod;
 
-USE modul7_tugas;
+use cod;
 
-CREATE TABLE IF NOT EXISTS barang (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nama VARCHAR(100) NOT NULL,
-    harga DECIMAL(12, 2) NOT NULL
+CREATE TABLE `barang` (
+  `id` int(11) NOT NULL auto_increment,
+  `nama` varchar(100),
+  `harga` int(11),
+  PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS pembeli (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nama VARCHAR(100) NOT NULL,
-    no_hp VARCHAR(20) NOT NULL,
-    alamat VARCHAR(255) NOT NULL
+CREATE TABLE `pembeli` (
+  `id` int(11) NOT NULL auto_increment,
+  `nama` varchar(100),
+  `nomor_hp` varchar(20),
+  `alamat` varchar(200),
+  PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS kurir (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nama VARCHAR(100) NOT NULL,
-    no_hp VARCHAR(20) NOT NULL
+CREATE TABLE `kurir` (
+  `id` int(11) NOT NULL auto_increment,
+  `nama` varchar(100),
+  `nomor_hp` varchar(20),
+  PRIMARY KEY (`id`)
 );
-
-INSERT IGNORE INTO barang (id, nama, harga) VALUES
-    (1, 'Buku Pemrograman Web', 85000),
-    (2, 'Keyboard', 175000),
-    (3, 'Mouse', 95000);
-
-INSERT IGNORE INTO pembeli (id, nama, no_hp, alamat) VALUES
-    (1, 'Pembeli 1', '0000000001', 'Alamat contoh 1'),
-    (2, 'Pembeli 2', '0000000002', 'Alamat contoh 2'),
-    (3, 'Pembeli 3', '0000000003', 'Alamat contoh 3');
-
-INSERT IGNORE INTO kurir (id, nama, no_hp) VALUES
-    (1, 'Kurir 1', '0000000011'),
-    (2, 'Kurir 2', '0000000012'),
-    (3, 'Kurir 3', '0000000013');
