@@ -1,0 +1,3 @@
+1. ID session adalah identitas unik yang menghubungkan pengguna dengan data session-nya di server.
+2. Session menyimpan data di server dan biasanya memakai cookie berisi ID session. Cookie menyimpan data langsung di browser; ukurannya terbatas dan dapat diatur masa berlakunya.
+3. Session berakhir saat dihapus dengan session_destroy(), pengguna logout, browser ditutup (untuk cookie session), atau batas waktu session di server terlampaui.
